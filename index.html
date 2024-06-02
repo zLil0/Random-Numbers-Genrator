@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="title">Random</h1>
+        <div id="content">
+            <div id="controllers">
+                <div id="range-controller">
+                    <div id="from-wrapper">
+                        <label for="from">De: </label>
+                        <input id="from" type="number" value="1" name="from">
+                        <button class="spinnerController" onclick="modifyInputValue('-', 'from')">-</button>
+                        <button class="spinnerController" onclick="modifyInputValue('+', 'from')">+</button>
+                    </div>
+                    <div id="to-wrapper">
+                        <label for="to">Até: </label>
+                        <input id="to" type="number" value="10" name="to">
+                        <button class="spinnerController" onclick="modifyInputValue('-', 'to')">-</button>
+                        <button class="spinnerController" onclick="modifyInputValue('+', 'to')">+</button>
+                    </div>
+                </div>
+                <div id="left-wrapper">
+                    <div id="qtd-controller">
+                        <label for="amount">Quantidade: </label>
+                        <input id="amount" type="number" value="1" name="amount">
+                        <button class="spinnerController" onclick="modifyInputValue('-', 'amount')">-</button>
+                        <button class="spinnerController" onclick="modifyInputValue('+', 'amount')">+</button>
+                    </div>
+                    <div id="repeat-controller">
+                        <label for="repeat">Repetir: </label>
+                        <input id="repeat" type="checkbox" name="repeat">
+                    </div>
+                </div>
+            </div>
+            <button id="go" onclick="randomInt()">GO</button>
+            <div id="random-generated">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
